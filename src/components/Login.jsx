@@ -19,7 +19,7 @@ const Login = () => {
         setError("");
 
         try {
-            const response = await axios.post('http://127.0.0.1:5000/login', formData);
+            const response = await axios.post('https://report-management-system-backend.onrender.com/login', formData);
             const { access_token, role } = response.data;
             
             // Store token and user info

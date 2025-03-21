@@ -58,7 +58,7 @@ const Dashboard = () => {
     // Fetch user profile
     const fetchProfile = async () => {
         try {
-            const response = await axios.get("http://127.0.0.1:5000/profile", {
+            const response = await axios.get("https://report-management-system-backend.onrender.com/profile", {
                 headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` }
             });
             setProfile(response.data);
@@ -82,7 +82,7 @@ const Dashboard = () => {
                 ...filters
             });
 
-            const response = await axios.get(`http://127.0.0.1:5000/services/history?${params.toString()}`, {
+            const response = await axios.get(`https://report-management-system-backend.onrender.com/services/history?${params.toString()}`, {
                 headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` }
             });
 
@@ -106,8 +106,8 @@ const Dashboard = () => {
 
         try {
             const url = editingId 
-                ? `http://127.0.0.1:5000/services/update/${editingId}`
-                : "http://127.0.0.1:5000/services";
+                ? `https://report-management-system-backend.onrender.com/services/update/${editingId}`
+                : "https://report-management-system-backend.onrender.com/services";
 
             const method = editingId ? 'put' : 'post';
             
@@ -135,7 +135,7 @@ const Dashboard = () => {
 
         try {
             const response = await axios.put(
-                "http://127.0.0.1:5000/profile/update",
+                "https://report-management-system-backend.onrender.com/profile/update",
                 profileForm,
                 {
                     headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` }

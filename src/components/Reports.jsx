@@ -20,7 +20,7 @@ const Reports = () => {
             setLoading(true);
             setError("");
 
-            const response = await axios.get("http://127.0.0.1:5000/reports", {
+            const response = await axios.get("https://report-management-system-backend.onrender.com/reports", {
                 headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` },
                 params: { year }
             });
