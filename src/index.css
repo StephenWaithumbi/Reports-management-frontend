@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #1a1a1a; /* Dark text for light mode */
+  background-color: #f8fafc; /* Light background for light mode */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f8fafc; /* Light text for dark mode */
+    background-color: #1a1a1a; /* Dark background for dark mode */
+  }
+}
+
+/* Global styles */
+body {
+  margin: 10%;
+  margin-top: 4%;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1e293b; /* Dark gray for headings */
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #334155; /* Slightly lighter gray for subheadings */
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569; /* Medium gray for paragraphs */
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: #3b82f6; /* Blue for links */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #2563eb; /* Darker blue on hover */
+}
+
+/* Buttons */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #3b82f6; /* Blue for buttons */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+  transform: translateY(-1px);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px solid rgba(59, 130, 246, 0.5); /* Focus ring */
+}
+
+/* Forms */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1; /* Light gray border */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1a1a1a;
+  background-color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); /* Subtle focus shadow */
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0; /* Light gray border */
+}
+
+th {
+  background-color: #f8fafc; /* Light gray background for headers */
+  font-weight: 600;
+  color: #1e293b; /* Dark gray for header text */
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Custom colors */
+.bg-primary {
+  background-color: #3b82f6; /* Blue */
+}
+
+.text-primary {
+  color: #3b82f6; /* Blue */
+}
+
+.bg-secondary {
+  background-color: #f8fafc; /* Light gray */
+}
+
+.text-secondary {
+  color: #64748b; /* Medium gray */
+}
