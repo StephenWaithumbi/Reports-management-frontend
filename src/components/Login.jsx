@@ -30,7 +30,13 @@ const Login = () => {
             localStorage.setItem('department', response.data.department);
 
             // Redirect based on role
-            navigate(role === 'head_of_planning' ? '/reports' : '/dashboard');
+            if (role === 'admin') {
+                navigate('/admin'); // Redirect admins to the admin dashboard
+            } else if (role === 'head_of_planning') {
+                navigate('/reports'); // Redirect planning heads to reports
+            } else {
+                navigate('/dashboard'); // Redirect regular users to the dashboard
+            }
         } catch (error) {
             setError(error.response?.data?.error || "Login failed. Please try again.");
         } finally {

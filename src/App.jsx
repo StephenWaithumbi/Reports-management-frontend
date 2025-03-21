@@ -3,8 +3,7 @@ import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import Reports from "./components/Reports";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Profile from "./components/Profile";
-import Sidebar from "./components/Sidebar";
+import Admin from "./components/Admin"; // Import the Admin component
 
 function App() {
     return (
@@ -19,6 +18,11 @@ function App() {
                 <Route path="/reports" element={
                     <ProtectedRoute requiredRole="head_of_planning">
                         <Reports />
+                    </ProtectedRoute>
+                } />
+                <Route path="/admin" element={
+                    <ProtectedRoute requiredRole="admin">
+                        <Admin />
                     </ProtectedRoute>
                 } />
                 <Route path="*" element={<Navigate to="/dashboard" />} />
