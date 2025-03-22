@@ -320,7 +320,7 @@ const Admin = () => {
                                         <tr key={user.id} className="border-b hover:bg-gray-50 transition-colors">
                                             <td className="px-6 py-4">{`${user.first_name} ${user.last_name}`}</td>
                                             <td className="px-6 py-4">{user.email}</td>
-                                            <td className="px-6 py-4">{user.department?.name || "N/A"}</td>
+                                            <td className="px-6 py-4">{user.department || "N/A"}</td>
                                             <td className="px-6 py-4 flex gap-2">
                                                 <button
                                                     onClick={() => resetPassword(user.id)}
